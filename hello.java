@@ -46,5 +46,47 @@ public class hello {
         boolean t = true;
         System.out.println("boolean t = " + b);
 
+
+        //literals
+
+        int octal = 010;
+        System.out.println("octal: " + octal);
+
+        int hexa = 0X123FACE;
+        System.out.println("Hexadecimal integer: " + hexa);
+
+        int binary = 0B101;
+        System.out.println("Binary literal: " + binary);
+
+        // we can put underscore between digits to easily count them
+        int dig = 1_00_00_000;
+        System.out.println(dig);
+
+        //Float literals
+        double dubl = 56;
+        System.out.println("double: " + dubl);
+
+        double exponential = 12e10;
+        System.out.println("exponential: " + exponential);
+
+        //CHAR literal
+
+        char ch = 's';
+        System.out.println("single quote character: " + ch);
+
+        char dec = 65;
+        System.out.println("char literal as decimal integer: " + dec);
+
+        char d = 'A';
+        d++;
+        System.out.println("char 65 + 1: " + d);
+
+        //0101 octal = 65 in decimal, 65 decimal is for A
+        char oct = 0101;
+        System.out.println("char literal as octal int: " + oct);
+
+        //0x41 hexadecimal = 65 in decimal, 65 decimal is for A
+        char hex = 0x41;
+        System.out.println("char literal as hexadecimal int: " + hex);
     }
 }
