@@ -46,8 +46,7 @@ public class hello {
         boolean t = true;
         System.out.println("boolean t = " + b);
 
-
-        //literals
+        // literals
 
         int octal = 010;
         System.out.println("octal: " + octal);
@@ -62,14 +61,14 @@ public class hello {
         int dig = 1_00_00_000;
         System.out.println(dig);
 
-        //Float literals
+        // Float literals
         double dubl = 56;
         System.out.println("double: " + dubl);
 
         double exponential = 12e10;
         System.out.println("exponential: " + exponential);
 
-        //CHAR literal
+        // CHAR literal
 
         char ch = 's';
         System.out.println("single quote character: " + ch);
@@ -81,11 +80,11 @@ public class hello {
         d++;
         System.out.println("char 65 + 1: " + d);
 
-        //0101 octal = 65 in decimal, 65 decimal is for A
+        // 0101 octal = 65 in decimal, 65 decimal is for A
         char oct = 0101;
         System.out.println("char literal as octal int: " + oct);
 
-        //0x41 hexadecimal = 65 in decimal, 65 decimal is for A
+        // 0x41 hexadecimal = 65 in decimal, 65 decimal is for A
         char hex = 0x41;
         System.out.println("char literal as hexadecimal int: " + hex);
     }
