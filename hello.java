@@ -44,7 +44,7 @@ public class hello {
 
         // boolean
         boolean t = true;
-        System.out.println("boolean t = " + b);
+        System.out.println("boolean t = " + t);
 
         // literals
 
