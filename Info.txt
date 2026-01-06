@@ -1,0 +1,10 @@
+****** Main method ******
+    => Main method is the starting point of program
+    
+****** Object Oriented Programming ******
+
+    => Method overloading: Methods with same name but difference in the number of parameters or type of parameters.
+
+JVM memory is catogerized into two parts:
+ => Stack: Last IN First Out (LIFO) - Every method has its own stack
+ => Heap Memory: (can expand) : Open space - no sequence
