@@ -1,5 +1,6 @@
 //CLASS
 class Calculator{
+    int num = 5;
     //method with parameter
     public int add(int n1, int n2){
         System.out.println("added " + n1 + " and " + n2);
@@ -54,5 +55,14 @@ public class Objects {
         comp.playMusic();
         System.out.println(comp.getMePen());
         System.out.println(comp.getPen(90));
+
+        Calculator obj = new Calculator();
+        Calculator obj1 = new Calculator();
+
+        //obj and obj1 will be craeted at different locations in heap memory => changes instances variable of one object doesn't affect other object
+        obj.num = 8; // obj1.num not affected
+        
+        System.out.println("obj1.num: " + obj.num);
+        System.out.println("obj2.num: " + obj1.num);
     }
 }
