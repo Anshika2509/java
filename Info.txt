@@ -8,3 +8,20 @@
 JVM memory is catogerized into two parts:
  => Stack: Last IN First Out (LIFO) - Every method has its own stack
  => Heap Memory: (can expand) : Open space - no sequence
+
+## variables are created in stack Memory
+## When a method is called it also consumes space in stack memory
+
+## An Object is created in Heap Memory => Each object creates a new instance in heap memory and doing anything on an object does not affects any other object.
+
+
+######### ARRAYS #########
+ => collection of multiple objects in a single variable.
+ => fixed size
+ int num[] = new int[3];  => sets all values to zero
+ int num[] = {1, 2, 3};
+
+  -----------------------
+ | 1 | 2 | 3 | 4 | 5 | 6 |  => ARRAY
+  -----------------------
+   0   1   2   3   4   5    => INDEX
