@@ -15,8 +15,9 @@ public class MultiDimensionalArrays {
         //printing values
         for(int i=0; i<multiNum.length; i++){
             for(int j=0; j<multiNum[0].length; j++){
-                System.out.println("value for " + i + ", " + j + " = " + multiNum[i][j]);
+                System.out.print( multiNum[i][j]  + " ");
             }
+            System.out.println();
         }
     }
 }
