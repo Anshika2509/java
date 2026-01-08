@@ -8,7 +8,7 @@ public class MultiDimensionalArrays {
         int multiNum[][] = new int[3][4];
         for(int i=0; i<multiNum.length; i++){
             for(int j=0; j<multiNum[0].length; j++){
-                multiNum[i][j] = (int)(Math.random()*100);
+                multiNum[i][j] = (int)(Math.random()*10);
             }
         }
 
@@ -19,5 +19,18 @@ public class MultiDimensionalArrays {
             }
             System.out.println();
         }
+        
+        //enhanced for loop
+        System.out.println("Printing array using enhanced for loop: ");
+
+        for(int n[]: multiNum)  //Traverse multiNum => each n is an array
+        {
+            for(int m: n) // m is each element of n 
+            {
+                System.out.print(m + " ");
+            }
+            System.out.println();
+        }
+
     }
 }
