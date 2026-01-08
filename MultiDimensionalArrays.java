@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.*;
 
 public class MultiDimensionalArrays {
     public static void main(String[] args) {
@@ -7,8 +8,7 @@ public class MultiDimensionalArrays {
         int multiNum[][] = new int[3][4];
         for(int i=0; i<multiNum.length; i++){
             for(int j=0; j<multiNum[0].length; j++){
-                System.out.println("enter value for " + i + ", " + j);
-                multiNum[i][j] = sc.nextInt();
+                multiNum[i][j] = (int)(Math.random()*100);
             }
         }
 
