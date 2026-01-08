@@ -20,5 +20,15 @@ public class JaggedArray {
             }
             System.out.println();
         }
+
+        //enhanced for loop
+        System.out.println("Printing jagged array using enhanced for loop: ");
+
+        for(int[] n: num){
+            for(int m: n){
+                System.out.print(m + " ");
+            }
+            System.out.println();
+        }
     }
 }
