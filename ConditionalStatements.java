@@ -48,7 +48,7 @@ public class ConditionalStatements {
 
         //SWITCH STATEMENT
         int day = 7;
-        switch (day) { // switch allows only integer parameter
+        switch (day) { // switch allows only integer parameter till Java 5, but after that Strings are also supported
             case 1:
                 System.out.println("Monday");
                 break;
@@ -74,7 +74,51 @@ public class ConditionalStatements {
                 System.out.println("INVALID DAY");
                 break;
         }
+
+
+        // Updates in SWITCH in newver Java verions = 
+        // 1 - No need of break by using arrow ->
+        // 2 - Return expression from switch
+
+        // ************* Day based alarm *************
+        String d = "Monday";
+
+        switch (d) {
+            case "Saturday", "Sunday" -> System.out.println("6am");
+            case "Monday" -> System.out.println("8am");
+            default -> System.out.println("7am");
+        }
+
+        // returning expression
+        String r = "";
+        switch (d){
+            case "Saturday", "Sunday" -> r = "It's " + d + ", Wake up at 6am";
+            case "Monday" -> r = "It's " + d + ", Wake up at 8am";
+            default -> r = "It's " + d + ", Wake up at 7am";
+        }
+        System.out.println(r);
+
        
+        // rerurn value from switch
+        String res = "";
+        res = switch (d){
+            case "Saturday", "Sunday" -> "It's " + d + ", Wake up at 6am";
+            case "Monday" -> "It's " + d + ", Wake up at 8am";
+            default -> "It's " + d + ", Wake up at 7am";
+        }; // semi colon needed here
+
+        System.out.println(res);
+
+        //Result from switch using : and not -> ----- need to yield keyword
+
+        String statement = "";
+        statement = switch (d){
+            case "Saturday", "Sunday": yield "It's " + d + ", Alarm set up at 6am";
+            case "Monday": yield  "It's " + d + ", Alarm set up at 8am";
+            default: yield "It's " + d + ", Alarm set up at 7am";
+        }; // semi colon needed here
+
+        System.out.println(statement);
     }
     
 }
