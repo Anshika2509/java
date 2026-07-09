@@ -41,7 +41,7 @@ public class Operators {
 
         // pre increament => here works same as post increament
         ++num1;
-        System.out.println("num1 decreament: " + num1);
+        System.out.println("num1 increament: " + num1);
 
         // behaves differently while assignment
 

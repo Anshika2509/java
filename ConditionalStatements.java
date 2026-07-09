@@ -35,7 +35,7 @@ public class ConditionalStatements {
         //Ternary operator
 
         int num = 23;
-        int result = (num % 2 == 0) ? 10 : 20;
+        String result = (num % 2 == 0) ? "EVEN" : "ODD";
         System.out.println(result);
 
         //NESTED TERNARY
