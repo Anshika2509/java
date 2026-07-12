@@ -6,7 +6,8 @@
     => Method overloading: Methods with same name but difference in the number of parameters or type of parameters.
 
 JVM memory is catogerized into two parts:
- => Stack: Last IN First Out (LIFO) - Every method has its own stack
+ => Stack: Last IN First Out (LIFO) - 
+ ********** Every method has its own stack **************
  => Heap Memory: (can expand) : Open space - no sequence
 
 ## variables are created in stack Memory
@@ -25,3 +26,13 @@ JVM memory is catogerized into two parts:
  | 1 | 2 | 3 | 4 | 5 | 6 |  => ARRAY
   -----------------------
    0   1   2   3   4   5    => INDEX
+
+
+| Feature                         | Checked/Determined using            | When it is decided               |
+| ------------------------------- | ----------------------------------- | -------------------------------- |
+| **Constructor execution**       | **Object type (`new ClassName()`)** | Runtime (during object creation) |
+| **Can I call a method?**        | **Reference type**                  | Compile time                     |
+| **Overridden method execution** | **Object type**                     | Runtime                          |
+| **Instance variable access**    | **Reference type**                  | Compile time                     |
+| **Static method execution**     | **Reference type**                  | Compile time (Method Hiding)     |
+
