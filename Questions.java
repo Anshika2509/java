@@ -79,6 +79,26 @@ class Dog5 extends Animal5 {
 }
 
 public class Questions {
+
+    //***********************************************
+
+    // 6th question classes *************************
+    public void print(Integer i){
+            System.out.println("Integer");
+    }
+
+    public void print(int i){
+        System.out.println("int");
+    }
+
+    public void print(long i){
+        System.out.println("long");
+    }
+
+    public void print(int... i){
+        System.out.println("int...");
+    }
+
     public static void main(String[] args) {
         
         // 1st question **********************
@@ -138,6 +158,18 @@ public class Questions {
        System.out.println(a.name);
 
        //And same for instance variables - they also depend on reference type
+
+       //***********************************************
+
+        // 6th question *********************************
+        System.out.println("\n*************6th question *************");
+
+        new Questions().print(10);  // gives int
+        new Questions().print(12345679109l);    // gives long
+        new Questions().print((Integer)10);    //gives Integer
+        new Questions().print(1,2,4,3);   // multiple ints = int...   called varargs)
+        new Questions().print();    // gives int... because varargs can take 0 args as well
+        
 
     }
 }
