@@ -1,4 +1,3 @@
-import java.util.Scanner;
 import java.util.*;
 
 public class MultiDimensionalArrays {
@@ -11,6 +10,9 @@ public class MultiDimensionalArrays {
                 multiNum[i][j] = (int)(Math.random()*10);
             }
         }
+
+        //Math.random gives decimal value less than 1.
+        // That's why multiple by 10 and then convert to int
 
         //printing values
         for(int i=0; i<multiNum.length; i++){
