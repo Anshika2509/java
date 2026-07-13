@@ -1,4 +1,7 @@
 // 1st questions classes **************
+
+import java.util.zip.CheckedInputStream;
+
 class Base{
     static void display(){
         System.out.println("Base Display");
@@ -78,8 +81,72 @@ class Dog5 extends Animal5 {
     }
 }
 
-public class Questions {
+//***********************************************
 
+// 8th question classes *************************
+class A8{
+    {
+        System.out.println("A8");
+    }
+}
+class B8 extends A8{
+    {
+        System.out.println("B8");
+    }
+}
+class C8 extends B8{
+    {
+        System.out.println("C8");
+    }
+}
+
+//***********************************************
+
+// 9th question classes *************************
+class A9{
+    static{
+        System.out.println("A9");
+    }
+}
+class B9 extends A9{
+    static{
+        System.out.println("B9");
+    }
+}
+class C9 extends B9{
+    static{
+        System.out.println("C9");
+    }
+}
+
+//***********************************************
+
+// 10th question classes *************************
+class ParentClass{
+    static{
+        System.out.println("ParentClass-A");
+    }
+    {
+        System.out.println("ParentClass-B");
+    }
+    public ParentClass(){
+        System.out.println("ParentClass-C");
+    }
+}
+
+class ChildClass extends ParentClass{
+    static{
+        System.out.println("ChildClass-A");
+    }
+    {
+        System.out.println("ChildClass-B");
+    }
+    public ChildClass(){
+        System.out.println("ChildClass-C");
+    }
+} 
+
+public class Questions {
     //***********************************************
 
     // 6th question classes *************************
@@ -97,6 +164,33 @@ public class Questions {
 
     public void print(int... i){
         System.out.println("int...");
+    }
+
+
+    //***********************************************
+
+    // 7th question classes *************************
+
+    
+    //static block is executed once when the java program is loaded by JVM before the main method is called
+
+    static
+    {
+        System.out.println("*************7th question *************");
+    }
+    static
+    {
+        System.out.println("1");
+    }
+
+    static
+    {
+        System.out.println(2);
+    }
+
+    static
+    {
+        System.out.println(3);
     }
 
     public static void main(String[] args) {
@@ -170,6 +264,21 @@ public class Questions {
         new Questions().print(1,2,4,3);   // multiple ints = int...   called varargs)
         new Questions().print();    // gives int... because varargs can take 0 args as well
         
+        //***********************************************
 
+        // 8th question *********************************
+        System.out.println("\n*************8th question *************");
+        C8 c8 = new C8();
+
+        //***********************************************
+
+        // 9th question *********************************
+        System.out.println("\n*************9th question *************");
+        C9 c9 = new C9();
+        
+        // 10th question *********************************
+        System.out.println("\n*************10th question *************");
+        ChildClass ch = new ChildClass();
+        // First, static blocks of both Parent Class and Child Class will execute, and then block and constructor of parent class and lastly block and constructor of child class
     }
 }
