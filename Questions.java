@@ -166,6 +166,22 @@ class Child extends Parent{
     }
 }
 
+
+//***********************************************
+
+// 13th question classes *************************
+class Base13{
+    void print(){
+        System.out.println("Base Method-13");
+    }
+}
+class Derived13 extends Base13{
+    @Override
+    void print(){
+        super.print();
+        System.out.println("Derived Method-13");
+    }
+}
 public class Questions {
     //***********************************************
 
@@ -315,14 +331,23 @@ public class Questions {
         //***********************************************
 
         // 12th question *********************************
-        System.out.println("\n*************12h question *************");
+        System.out.println("\n*************12th question *************");
         invokeMethod(null);
 
         // During overload resolution, null is compatible with both Object and String.
         // Since String is a subclass of Object, it is the more specific type.
         // Therefore, the compiler selects invokeMethod(String).
         //If there are multiple unrelated reference types, the call is ambiguous, resulting in a compile-time error. - EX: overloaded functions excepting String and Integer: invokeMethod(null) -> compile time error
-    }
+
+        //***********************************************
+
+        // 13th question *********************************
+        System.out.println("\n*************13th question *************");
+        Derived13 obj13 = new Derived13();
+        obj13.print();
+        // overridden print method in Derived calls super.print() first in it. Thus, output - Base Method-13 -> Derived Method-13 
+           
+        }
 
     //***********************************************
 
