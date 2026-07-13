@@ -1,5 +1,6 @@
 // 1st questions classes **************
 
+import java.util.prefs.PreferenceChangeEvent;
 import java.util.zip.CheckedInputStream;
 
 class Base{
@@ -146,6 +147,25 @@ class ChildClass extends ParentClass{
     }
 } 
 
+//***********************************************
+
+// 11th question classes *************************
+class Parent{
+    private void print(){
+        System.out.println("Parent");
+    }
+
+    public void display(){
+        print();
+    }
+}
+
+class Child extends Parent{
+    public void print(){
+        System.out.println("Child");
+    }
+}
+
 public class Questions {
     //***********************************************
 
@@ -280,5 +300,16 @@ public class Questions {
         System.out.println("\n*************10th question *************");
         ChildClass ch = new ChildClass();
         // First, static blocks of both Parent Class and Child Class will execute, and then block and constructor of parent class and lastly block and constructor of child class
+
+        //***********************************************
+
+        // 11th question *********************************
+        System.out.println("\n*************11th question *************");
+        Child child = new Child();
+        child.display();
+
+        //display is not overridden, to Java executes it from Parent Class.
+        // display method in Parent can acess it's private method
+        // print method in Child doesn't overrides the one in Parent, because private methods are not overridden
     }
 }
