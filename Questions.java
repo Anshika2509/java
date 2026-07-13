@@ -311,5 +311,26 @@ public class Questions {
         //display is not overridden, to Java executes it from Parent Class.
         // display method in Parent can acess it's private method
         // print method in Child doesn't overrides the one in Parent, because private methods are not overridden
+
+        //***********************************************
+
+        // 12th question *********************************
+        System.out.println("\n*************12h question *************");
+        invokeMethod(null);
+
+        // During overload resolution, null is compatible with both Object and String.
+        // Since String is a subclass of Object, it is the more specific type.
+        // Therefore, the compiler selects invokeMethod(String).
+        //If there are multiple unrelated reference types, the call is ambiguous, resulting in a compile-time error. - EX: overloaded functions excepting String and Integer: invokeMethod(null) -> compile time error
+    }
+
+    //***********************************************
+
+    // 12th question classes *************************
+    public static void invokeMethod(Object obj){
+        System.out.println("Object Method");
+    }
+    public static void invokeMethod(String str){
+        System.out.println("String method");
     }
 }
