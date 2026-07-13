@@ -182,6 +182,26 @@ class Derived13 extends Base13{
         System.out.println("Derived Method-13");
     }
 }
+
+//***********************************************
+
+// 14th question classes *************************
+abstract class Writer{
+    public static void write(){
+        System.out.println("Writing...");
+    }
+}
+class Author extends Writer{
+    public static void write(){
+        System.out.println("Writing Book");
+    }
+}
+class Programmer extends Writer{
+    public static void write(){
+        System.out.println("Writing Code");
+    }
+}
+
 public class Questions {
     //***********************************************
 
@@ -346,7 +366,15 @@ public class Questions {
         Derived13 obj13 = new Derived13();
         obj13.print();
         // overridden print method in Derived calls super.print() first in it. Thus, output - Base Method-13 -> Derived Method-13 
-           
+
+        //***********************************************
+
+        // 14th question *********************************
+        System.out.println("\n*************14th question *************");
+        Writer w = new Programmer();
+        w.write();
+        // Static methods are not overridden, Writer w binds to reference type (Writer) at compile time. thus, w.writer executes the Writer method
+        
         }
 
     //***********************************************
