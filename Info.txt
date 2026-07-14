@@ -36,3 +36,11 @@ JVM memory is catogerized into two parts:
 | **Instance variable access**    | **Reference type**                  | Compile time                     |
 | **Static method execution**     | **Reference type**                  | Compile time (Method Hiding)     |
 
+
+******** Disadvantages of ARRAYS ********
+-> Array is an Object (new int[]) - takes space in heap memory - takes continous memory locations of fix length.
+-> To expand array -> create new array
+-> To search or perform any operations, traverse the array - takes time  
+-> Arrays only contain same types of items
+
+--->>>> Resolution => Collections
